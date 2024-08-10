@@ -1,0 +1,123 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #FF9A8B, #FF6A88, #FF99AC, #FC9D9A);
+}
+
+.todo-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px; /* Increased width by 50px */
+    transition: height 0.3s ease;
+}
+
+.todo-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee; /* Added separation line */
+    padding-bottom: 10px;
+}
+
+.emoji {
+    margin-left: 10px; /* Added margin for spacing */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Darker border for clearer separation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li .actions {
+    display: flex;
+    align-items: center;
+}
+
+li .edit-task {
+    font-size: 12px; /* Reduced size for edit icon */
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+li .delete-task {
+    font-size: 14px; /* Font size for delete icon */
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.circle.completed {
+    background-color: #4CAF50;
+}
